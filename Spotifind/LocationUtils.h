@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface LocationUtils : NSObject
+@interface LocationUtils : NSObject <CLLocationManagerDelegate>
 
 + (CLLocationCoordinate2D)getCurrentLocation;
 

@@ -25,8 +25,9 @@
 
 @implementation ViewController
 
-NSString *kFindTrackURL = @"http://localhost:3000/find_track";
-NSString *kSaveTrackURL = @"http://localhost:3000/save_track";
+NSString *kURL = @"https://spotifindservice.herokuapp.com";
+NSString *kFindTrackURI =  @"/find_track";
+NSString *kSaveTrackURL = @"/save_track";
 NSString *kTrackUrl = @"spotify:track:";
 
 
@@ -41,7 +42,8 @@ NSString *kTrackUrl = @"spotify:track:";
     
     [self loadCurrentLocation];
 
-    NSURL *url = [[NSURL alloc] initWithString:kFindTrackURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@", kURL, kFindTrackURI];
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     NSString *latString = [NSString stringWithFormat:@"%.20lf", self.latitude];
     NSString *longString = [NSString stringWithFormat:@"%.20lf", self.longitude];
@@ -92,7 +94,8 @@ NSString *kTrackUrl = @"spotify:track:";
 -(void) sendCurrentLocation {
     CLLocationCoordinate2D coordinate = [LocationUtils getCurrentLocation];
     
-    NSURL *url = [[NSURL alloc] initWithString:kSaveTrackURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@", kURL, kSaveTrackURL];
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     NSString *latString = [NSString stringWithFormat:@"%.20lf", self.latitude];
     NSString *longString = [NSString stringWithFormat:@"%.20lf", self.longitude];
