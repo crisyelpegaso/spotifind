@@ -11,6 +11,9 @@
 		766870731DD5610700CBAE85 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766870701DD5610700CBAE85 /* SpotifyAudioPlayback.framework */; };
 		766870741DD5610700CBAE85 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766870711DD5610700CBAE85 /* SpotifyAuthentication.framework */; };
 		766870751DD5610700CBAE85 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766870721DD5610700CBAE85 /* SpotifyMetadata.framework */; };
+		76B248661E6CA41F004B3B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B248651E6CA41F004B3B9E /* CoreLocation.framework */; };
+		76B248691E6CAA6A004B3B9E /* LocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B248681E6CAA6A004B3B9E /* LocationUtils.m */; };
+		76B2486C1E6CABEB004B3B9E /* RequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2486B1E6CABEB004B3B9E /* RequestService.m */; };
 		76FC26961DB84801004304D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FC26951DB84801004304D1 /* main.m */; };
 		76FC26991DB84801004304D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FC26981DB84801004304D1 /* AppDelegate.m */; };
 		76FC269C1DB84801004304D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FC269B1DB84801004304D1 /* ViewController.m */; };
@@ -50,6 +53,11 @@
 		766870701DD5610700CBAE85 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		766870711DD5610700CBAE85 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		766870721DD5610700CBAE85 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		76B248651E6CA41F004B3B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		76B248671E6CAA6A004B3B9E /* LocationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationUtils.h; sourceTree = "<group>"; };
+		76B248681E6CAA6A004B3B9E /* LocationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationUtils.m; sourceTree = "<group>"; };
+		76B2486A1E6CABEB004B3B9E /* RequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestService.h; sourceTree = "<group>"; };
+		76B2486B1E6CABEB004B3B9E /* RequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestService.m; sourceTree = "<group>"; };
 		76FC26911DB84801004304D1 /* Spotifind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotifind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FC26951DB84801004304D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		76FC26971DB84801004304D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B248661E6CA41F004B3B9E /* CoreLocation.framework in Frameworks */,
 				76FC26E01DB84ADF004304D1 /* Security.framework in Frameworks */,
 				766870741DD5610700CBAE85 /* SpotifyAuthentication.framework in Frameworks */,
 				76FC26D11DB848E4004304D1 /* CoreData.framework in Frameworks */,
@@ -143,6 +152,10 @@
 				76FC26941DB84801004304D1 /* Supporting Files */,
 				7626417E1DD57BAD00CA290C /* PlayerViewController.h */,
 				7626417F1DD57BAD00CA290C /* PlayerViewController.m */,
+				76B248671E6CAA6A004B3B9E /* LocationUtils.h */,
+				76B248681E6CAA6A004B3B9E /* LocationUtils.m */,
+				76B2486A1E6CABEB004B3B9E /* RequestService.h */,
+				76B2486B1E6CABEB004B3B9E /* RequestService.m */,
 			);
 			path = Spotifind;
 			sourceTree = "<group>";
@@ -176,6 +189,7 @@
 		76FC26CD1DB8481E004304D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76B248651E6CA41F004B3B9E /* CoreLocation.framework */,
 				766870701DD5610700CBAE85 /* SpotifyAudioPlayback.framework */,
 				766870711DD5610700CBAE85 /* SpotifyAuthentication.framework */,
 				766870721DD5610700CBAE85 /* SpotifyMetadata.framework */,
@@ -326,7 +340,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76FC269C1DB84801004304D1 /* ViewController.m in Sources */,
+				76B248691E6CAA6A004B3B9E /* LocationUtils.m in Sources */,
 				762641801DD57BAD00CA290C /* PlayerViewController.m in Sources */,
+				76B2486C1E6CABEB004B3B9E /* RequestService.m in Sources */,
 				76FC26991DB84801004304D1 /* AppDelegate.m in Sources */,
 				76FC26961DB84801004304D1 /* main.m in Sources */,
 			);

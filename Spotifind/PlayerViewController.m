@@ -17,19 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.player = [SPTAudioStreamingController sharedInstance];
     self.player.delegate = self;
     self.player.playbackDelegate = self;
     
+   }
+
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self activateAudioSession];
-    [self.player playSpotifyURI:self.currentSongUri startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
+    [self.player playSpotifyURI:self.currentSongUri startingWithIndex:0 startingWithPosition:0 callback:^(NSError *error) {
         if (error != nil) {
             NSLog(@"*** failed to play: %@", error);
             return;
         }
     }];
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

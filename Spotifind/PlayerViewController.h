@@ -11,5 +11,5 @@
 #import <AVFoundation/AVAudioSession.h>
 
 @interface PlayerViewController : UIViewController<SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate>
-@property (weak) NSString *currentSongUri;
+@property NSString *currentSongUri;
 @end

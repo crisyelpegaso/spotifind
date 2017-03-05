@@ -54,7 +54,7 @@
                                 <rect key="frame" x="153.5" y="409.5" width="68" height="30"/>
                                 <state key="normal" title="Play Song"/>
                                 <connections>
-                                    <action selector="plauSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oto-4T-Lr6"/>
+                                    <action selector="playSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aiw-ZV-3Nz"/>
                                 </connections>
                             </button>
                         </subviews>
